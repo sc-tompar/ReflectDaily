@@ -1,0 +1,629 @@
+.reflection-menu {
+    background-color: #e6e9eb;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .reflection-menu .div {
+    background-color: #e6e9eb;
+    height: 1024px;
+    position: relative;
+    width: 1440px;
+  }
+  
+  .reflection-menu .overlap {
+    background-color: #2c3454;
+    height: 1024px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 110px;
+  }
+  
+  .reflection-menu .menu-icon {
+    height: 23px;
+    left: 33px;
+    position: absolute;
+    top: 24px;
+    width: 26px;
+  }
+  
+  .reflection-menu .line {
+    height: 1px;
+    left: 25px;
+    object-fit: cover;
+    position: absolute;
+    top: 237px;
+    width: 59px;
+  }
+  
+  .reflection-menu .qoutes-button {
+    height: 21px;
+    left: 36px;
+    position: absolute;
+    top: 320px;
+    width: 23px;
+  }
+  
+  .reflection-menu .overlap-group {
+    height: 57px;
+    left: 0;
+    position: absolute;
+    top: 364px;
+    width: 110px;
+  }
+  
+  .reflection-menu .reflection-button {
+    height: 26px;
+    left: 36px;
+    position: absolute;
+    top: 13px;
+    width: 29px;
+  }
+  
+  .reflection-menu .highlight-effects {
+    background-color: #b6bdc280;
+    border-color: #e5a692;
+    border-left-style: solid;
+    border-left-width: 5px;
+    height: 57px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 110px;
+  }
+  
+  .reflection-menu .streak-button {
+    height: 33px;
+    left: 36px;
+    position: absolute;
+    top: 441px;
+    width: 13px;
+  }
+  
+  .reflection-menu .sign-out-button {
+    height: 28px;
+    left: 36px;
+    position: absolute;
+    top: 513px;
+    width: 17px;
+  }
+  
+  .reflection-menu .avatar-icon {
+    background-image: url(./avatar.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 77px;
+    left: 13px;
+    position: absolute;
+    top: 124px;
+    width: 83px;
+  }
+  
+  .reflection-menu .status-online {
+    background-color: #4ff601;
+    border: 1px solid;
+    border-color: #ffffff;
+    border-radius: 10px;
+    height: 20px;
+    left: 57px;
+    position: relative;
+    top: 51px;
+    width: 20px;
+  }
+  
+  .reflection-menu .overlap-2 {
+    background-color: #2c3454;
+    border-bottom-style: solid;
+    border-bottom-width: 0.5px;
+    border-color: #ffffff;
+    border-left-style: solid;
+    border-left-width: 0.5px;
+    height: 75px;
+    left: 110px;
+    position: absolute;
+    top: 0;
+    width: 1330px;
+  }
+  
+  .reflection-menu .avatar {
+    height: 49px;
+    left: 1244px;
+    object-fit: cover;
+    position: absolute;
+    top: 16px;
+    width: 54px;
+  }
+  
+  .reflection-menu .div-wrapper {
+    background-color: #ffffff;
+    border-radius: 5px;
+    height: 43px;
+    left: 288px;
+    position: absolute;
+    top: 14px;
+    width: 295px;
+  }
+  
+  .reflection-menu .text-wrapper {
+    color: #2c3454;
+    font-family: "Nunito-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 13px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 9px;
+    width: 185px;
+  }
+  
+  .reflection-menu .vector {
+    height: 19px;
+    left: 598px;
+    position: absolute;
+    top: 28px;
+    width: 22px;
+  }
+  
+  .reflection-menu .reflect-daily {
+    color: transparent;
+    font-family: "Roboto-Bold", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 58px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 18px;
+    width: 145px;
+  }
+  
+  .reflection-menu .span {
+    color: #e5a692;
+    font-weight: 700;
+  }
+  
+  .reflection-menu .text-wrapper-2 {
+    color: #605ab3;
+    font-family: "Nunito-Bold", Helvetica;
+    font-weight: 700;
+  }
+  
+  .reflection-menu .text-wrapper-3 {
+    color: #2c3454;
+    font-family: "Nunito-Bold", Helvetica;
+    font-size: 28px;
+    font-weight: 700;
+    left: 293px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 123px;
+    white-space: nowrap;
+    width: 138px;
+  }
+  
+  .reflection-menu .overlap-3 {
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    height: 30px;
+    left: 455px;
+    position: absolute;
+    top: 130px;
+    width: 96px;
+  }
+  
+  .reflection-menu .text-wrapper-4 {
+    color: #2c3454;
+    font-family: "Roboto-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    left: 26px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 4px;
+    width: 43px;
+  }
+  
+  .reflection-menu .more-icon {
+    height: 5px;
+    left: 79px;
+    position: absolute;
+    top: 12px;
+    width: 10px;
+  }
+  
+  .reflection-menu .overlap-4 {
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    height: 30px;
+    left: 569px;
+    position: absolute;
+    top: 130px;
+    width: 96px;
+  }
+  
+  .reflection-menu .overlap-5 {
+    background-color: #ffffff;
+    border-radius: 5px;
+    height: 30px;
+    left: 989px;
+    position: absolute;
+    top: 130px;
+    width: 214px;
+  }
+  
+  .reflection-menu .text-wrapper-5 {
+    color: #1e1e1e;
+    font-family: "Roboto-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    left: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+    opacity: 0.5;
+    position: absolute;
+    top: 6px;
+    width: 46px;
+  }
+  
+  .reflection-menu .img {
+    height: 5px;
+    left: 197px;
+    position: absolute;
+    top: 12px;
+    width: 10px;
+  }
+  
+  .reflection-menu .vector-wrapper {
+    background-color: #2c3454;
+    border-radius: 5px;
+    height: 30px;
+    left: 1215px;
+    position: absolute;
+    top: 130px;
+    width: 42px;
+  }
+  
+  .reflection-menu .vector-2 {
+    height: 14px;
+    left: 14px;
+    position: absolute;
+    top: 8px;
+    width: 14px;
+  }
+  
+  .reflection-menu .img-wrapper {
+    background-color: #ffffff;
+    border-radius: 5px;
+    height: 30px;
+    left: 940px;
+    position: absolute;
+    top: 130px;
+    width: 40px;
+  }
+  
+  .reflection-menu .vector-3 {
+    height: 20px;
+    left: 11px;
+    position: absolute;
+    top: 5px;
+    width: 18px;
+  }
+  
+  .reflection-menu .overlap-6 {
+    height: 243px;
+    left: 271px;
+    position: absolute;
+    top: 269px;
+    width: 319px;
+  }
+  
+  .reflection-menu .rereflection-notes {
+    height: 243px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 319px;
+  }
+  
+  .reflection-menu .overlap-group-2 {
+    background-color: #faf9f6;
+    border-radius: 10px;
+    height: 243px;
+    position: relative;
+    width: 311px;
+  }
+  
+  .reflection-menu .overlap-7 {
+    height: 175px;
+    left: 7px;
+    position: absolute;
+    top: 58px;
+    width: 294px;
+  }
+  
+  .reflection-menu .overlap-group-3 {
+    height: 175px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 270px;
+  }
+  
+  .reflection-menu .p {
+    color: #2c3454;
+    font-family: "Nunito-Bold", Helvetica;
+    font-size: 14px;
+    font-weight: 700;
+    left: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 245px;
+  }
+  
+  .reflection-menu .text-wrapper-6 {
+    color: #605ab3;
+    font-family: "Roboto-BoldItalic", Helvetica;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 151px;
+    width: 79px;
+  }
+  
+  .reflection-menu .line-2 {
+    height: 1px;
+    left: 22px;
+    object-fit: cover;
+    position: absolute;
+    top: 138px;
+    width: 248px;
+  }
+  
+  .reflection-menu .text-wrapper-7 {
+    color: #2c3454;
+    font-family: "Nunito-Bold", Helvetica;
+    font-size: 14px;
+    font-weight: 700;
+    left: 162px;
+    letter-spacing: 0;
+    line-height: normal;
+    opacity: 0.5;
+    position: absolute;
+    top: 158px;
+    white-space: nowrap;
+    width: 132px;
+  }
+  
+  .reflection-menu .text-wrapper-8 {
+    color: #e5a692;
+    font-family: "Roboto-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    left: 7px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 14px;
+    width: 79px;
+  }
+  
+  .reflection-menu .vector-4 {
+    height: 18px;
+    left: 232px;
+    position: absolute;
+    top: 14px;
+    width: 18px;
+  }
+  
+  .reflection-menu .vector-5 {
+    height: 18px;
+    left: 271px;
+    position: absolute;
+    top: 14px;
+    width: 14px;
+  }
+  
+  .reflection-menu .vector-6 {
+    height: 14px;
+    left: 190px;
+    position: absolute;
+    top: 18px;
+    width: 20px;
+  }
+  
+  .reflection-menu .group {
+    height: 243px;
+    left: 619px;
+    position: absolute;
+    top: 269px;
+    width: 319px;
+  }
+  
+  .reflection-menu .text-wrapper-9 {
+    color: #ff0000;
+    font-family: "Roboto-BoldItalic", Helvetica;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 151px;
+    width: 79px;
+  }
+  
+  .reflection-menu .text-wrapper-10 {
+    color: #2c3454;
+    font-family: "Nunito-Bold", Helvetica;
+    font-size: 14px;
+    font-weight: 700;
+    left: 164px;
+    letter-spacing: 0;
+    line-height: normal;
+    opacity: 0.5;
+    position: absolute;
+    top: 158px;
+    white-space: nowrap;
+    width: 130px;
+  }
+  
+  .reflection-menu .text-wrapper-11 {
+    color: #ff0000;
+    font-family: "Roboto-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    left: 7px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 14px;
+    width: 93px;
+  }
+  
+  .reflection-menu .vector-7 {
+    height: 14px;
+    left: 191px;
+    position: absolute;
+    top: 15px;
+    width: 20px;
+  }
+  
+  .reflection-menu .overlap-wrapper {
+    height: 243px;
+    left: 967px;
+    position: absolute;
+    top: 269px;
+    width: 319px;
+  }
+  
+  .reflection-menu .text-wrapper-12 {
+    color: #605ab3;
+    font-family: "Roboto-BoldItalic", Helvetica;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 151px;
+    width: 93px;
+  }
+  
+  .reflection-menu .text-wrapper-13 {
+    color: #2c3454;
+    font-family: "Nunito-Bold", Helvetica;
+    font-size: 14px;
+    font-weight: 700;
+    left: 158px;
+    letter-spacing: 0;
+    line-height: normal;
+    opacity: 0.5;
+    position: absolute;
+    top: 158px;
+    white-space: nowrap;
+    width: 136px;
+  }
+  
+  .reflection-menu .text-wrapper-14 {
+    color: #605ab3;
+    font-family: "Roboto-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    left: 7px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 14px;
+    width: 93px;
+  }
+  
+  .reflection-menu .vector-8 {
+    height: 14px;
+    left: 191px;
+    position: absolute;
+    top: 19px;
+    width: 20px;
+  }
+  
+  .reflection-menu .overlap-group-wrapper {
+    height: 243px;
+    left: 967px;
+    position: absolute;
+    top: 601px;
+    width: 319px;
+  }
+  
+  .reflection-menu .group-2 {
+    height: 243px;
+    left: 619px;
+    position: absolute;
+    top: 601px;
+    width: 311px;
+  }
+  
+  .reflection-menu .overlap-8 {
+    height: 243px;
+    position: relative;
+    width: 319px;
+  }
+  
+  .reflection-menu .text-wrapper-15 {
+    color: #2c3454;
+    font-family: "Nunito-Bold", Helvetica;
+    font-size: 14px;
+    font-weight: 700;
+    left: 153px;
+    letter-spacing: 0;
+    line-height: normal;
+    opacity: 0.5;
+    position: absolute;
+    top: 158px;
+    white-space: nowrap;
+    width: 141px;
+  }
+  
+  .reflection-menu .vector-9 {
+    height: 14px;
+    left: 196px;
+    position: absolute;
+    top: 16px;
+    width: 20px;
+  }
+  
+  .reflection-menu .group-3 {
+    height: 243px;
+    left: 274px;
+    position: absolute;
+    top: 601px;
+    width: 319px;
+  }
+  
+  .reflection-menu .text-wrapper-16 {
+    color: #2c3454;
+    font-family: "Nunito-Bold", Helvetica;
+    font-size: 14px;
+    font-weight: 700;
+    left: 159px;
+    letter-spacing: 0;
+    line-height: normal;
+    opacity: 0.5;
+    position: absolute;
+    top: 158px;
+    white-space: nowrap;
+    width: 135px;
+  }
+  
