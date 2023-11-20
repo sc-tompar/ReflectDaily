@@ -1,8 +1,46 @@
-import React from 'react';
-import { Link } from 'react-router-dom'; 
-import './Login.css';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
+import '../styles/loginstyle.css';
 
 export default function Login() {
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate(-1); // This will navigate back
+  };
+
+  const [user, setUser] = useState({
+    email: '',
+    password: '',
+  });
+
+  const handleInputChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('http://localhost:8080/user/login',{
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(user),
+      });
+
+      if (response.ok) {
+        navigate('/dashboard'); 
+      } else {
+        console.error('Login failed');
+      }
+    } catch (error) {
+      console.error('Error during login:', error);
+    }
+  };
+
   return (
     <div className="login">
       <div className="left-panel">
@@ -14,14 +52,26 @@ export default function Login() {
       </div>
       <div className="right-panel">
         <h2 className="login-title">Login Now!</h2>
-        <form className="login-form">
+        <form className="login-form" onSubmit={handleLogin}>
           <div className="input-group">
-            <label htmlFor="username" className="input-label">Username</label>
-            <input type="text" id="username" name="username" />
+            <label htmlFor="email" className="input-label">Email</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              value={user.email}
+              onChange={handleInputChange}
+            />
           </div>
           <div className="input-group">
             <label htmlFor="password" className="input-label">Password</label>
-            <input type="password" id="password" name="password" />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              value={user.password}
+              onChange={handleInputChange}
+            />
           </div>
           <div className="actions">
             <div className="remember-me">
@@ -35,7 +85,9 @@ export default function Login() {
         <div className="signup-prompt">
           Don’t have an account? <Link to="/register" className="signup-link">SIGN UP</Link>
         </div>
-        <button className="back-button">Back</button>
+        <button className="back-button" onClick={handleBack}>
+          Back
+        </button>
       </div>
     </div>
   );
