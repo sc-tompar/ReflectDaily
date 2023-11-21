@@ -1,0 +1,86 @@
+.about-us {
+  text-align: center;
+  position: relative;
+  padding-top: 100px; 
+  padding-bottom: 171px;
+}
+
+.background-image {
+  background-image: url('/src/images/about-background.png'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.9; 
+}
+
+.content {
+  position: relative; 
+  z-index: 1;
+}
+
+h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 0.5em;
+}
+
+.motto {
+  color: #ddd;
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 2em;
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; 
+}
+
+.member {
+  width: 300px; 
+  background-color: rgba(255, 255, 255, 0.9); 
+  border-radius: 15px; 
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.member-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.member-info {
+  padding: 20px;
+  text-align: center; 
+}
+
+.member h3 {
+  color: #333;
+  margin: 10px 0;
+}
+
+.member-role {
+  color: #555;
+  font-weight: bold;
+}
+
+.member-bio {
+  color: #666;
+  font-size: 0.95rem;
+  height: auto; 
+  overflow-y: auto; 
+}
+
+.member:hover {
+  transform: translateY(-18px); 
+}
