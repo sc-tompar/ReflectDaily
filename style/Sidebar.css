@@ -1,0 +1,117 @@
+.sidebar {
+    background: #2C3454;
+    color: #fff;
+    height: 100vh;
+    width: 100px;
+    transition: all 0.3s;
+}
+.top_section {
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+}
+.ReflectDaily {
+    display: flex;
+    font-size: 25px;
+    margin-top: -115px;
+    margin-left: 30px;
+}
+.bars {
+    display: flex;
+    font-size: 25px;
+    margin-left: 50px;
+}
+.link {
+    display: flex;
+    color: #fff;
+    padding: 10px 15px;
+    gap: 15px;
+    transition: all 0.5s;
+}
+.link:hover {
+    background: lightskyblue;
+    color: #000;
+    transition: all 0.5s;
+}
+.active {
+    background: lightskyblue;
+    color: #000;
+    margin-top: 70px;
+}
+.icon, .link_text {
+    font-size: 20px;
+}
+.user-label {
+    display: flex;
+    font-size: 60%;
+    margin-top: 80px;
+    margin-right: -10px;
+    font-weight: bold;
+}
+.profile-image {
+    display: flex;
+    margin-top: 80px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 17px;
+}
+.mood-label {
+    font-size: 50%;
+    margin-top: 105px;
+    margin-left: -140px;
+    font-style: italic;
+}
+.search-section {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    margin-top: 60px;
+}
+.input-search {
+    flex-grow: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 15px;
+}
+.search-icon, .clear-icon {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.displayed-text {
+    color: white;
+    font-size: 14px;
+    padding: 10px 15px;
+    margin-left: 10px;
+}
+
+/* Define a keyframes animation */
+@keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .search-display {
+    margin-left: 135px;
+    margin-top: -42px;
+    font-weight: bolder;
+    text-decoration: underline; /* Add an underline to the text */
+    color: lightpink; /* Change text color to yellow */
+    font-family: "Your Desired Font", sans-serif; /* Change font style */
+  }
+  
+  /* Hover effect */
+  .search-display:hover {
+    /* Add your desired styles for the hover effect here */
+    background-color: #e0e0e0; /* Change this to the background color you want */
+    border-radius: 5px; /* Add rounded corners for a subtle effect */
+    transition: background-color 0.3s ease; /* Add a smooth transition */
+  }

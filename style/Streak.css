@@ -1,0 +1,41 @@
+.streak-container {
+    background-color: #2C3454;
+    margin-top: 20px;
+    width: 18%;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    margin-right: 200px;
+    margin-left: 180px;
+    color: white;
+    transition: background-color 0.3s ease; /* Add a transition effect for smooth color change */
+  }
+
+  .streak-container:hover {
+    background-color: lightskyblue; /* Change the background color to transparent on hover */
+  }
+
+  .streak-label-container {
+    background-color: #2C3454;
+    padding: 7px;
+    border-radius: 10px; /* Add curved corners */
+    transition: background-color 0.3s; /* Add transition effect for color change */
+    width: 9%;
+    margin-top: 30px;
+    color: white;
+  }
+  
+  .streak-label-container:hover {
+    background-color: lightblue; /* Change background color on hover to lightblue */
+    transition: background-color 0.3s; /* Add transition effect for color change */
+    color: #2C3454; /* Change text color on hover to the original background color */
+  }
+
+  .rbc-day-bg:hover,
+.rbc-date-cell:hover {
+    background-color: lightskyblue !important;
+    cursor: pointer; /* Optional: Change cursor to a pointer when hovering over cells */
+}
+  
