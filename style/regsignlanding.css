@@ -1,0 +1,335 @@
+.reg-sign-landing {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.reg-sign-landing .overlap-wrapper {
+  background-color: #ffffff;
+  height: 1024px;
+  overflow: hidden;
+  width: 1920px;
+}
+
+.reg-sign-landing .overlap {
+  height: 1024px;
+  position: relative;
+  width: 1920px;
+}
+
+.reg-sign-landing .background-design {
+  background-image: url(../images/background-design-image.png);
+  background-size: 1920px;
+  height: 1024px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 1920px;
+}
+
+.reg-sign-landing .reflect-daily {
+  color: transparent;
+  font-family: "Roboto-Bold", Helvetica;
+  font-size: 40px;
+  font-weight: 400;
+  left: 81px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 56px;
+  width: 242px;
+}
+
+.reg-sign-landing .text-wrapper {
+  color: #e5a692;
+  font-weight: 700;
+}
+
+.reg-sign-landing .span {
+  color: #605ab3;
+  font-family: "Nunito-Bold", Helvetica;
+  font-weight: 700;
+}
+
+.reg-sign-landing .transparent-image {
+  height: 460px;
+  left: 1056px;
+  opacity: 0.2;
+  position: absolute;
+  top: 88px;
+  width: 496px;
+}
+
+.reg-sign-landing .overlap-group {
+  height: 460px;
+  position: relative;
+  width: 441px;
+}
+
+.reg-sign-landing .ellipse {
+  background-color: #ffffff;
+  border-radius: 151px/152px;
+  height: 304px;
+  left: 139px;
+  opacity: 0.5;
+  position: absolute;
+  top: 122px;
+  width: 302px;
+}
+
+.reg-sign-landing .div {
+  background-color: #ffffff;
+  border-radius: 47px/48px;
+  height: 96px;
+  left: 334px;
+  opacity: 0.5;
+  position: absolute;
+  top: 197px;
+  width: 94px;
+}
+
+.reg-sign-landing .img {
+  background-image: url(../images/ellipse-5.png);
+  background-size: cover;
+  height: 460px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 384px;
+}
+
+
+
+.reg-sign-landing .trans-image {
+  background-image: url(../images/trans-image-1.png);
+  background-size: cover;
+  height: 460px;
+  left: 627px;
+  object-fit: cover;
+  position: absolute;
+  top: 104px;
+  width: 496px;
+}
+
+.reg-sign-landing .trans-image-2 {
+  background-image: url(../images/trans-image-2.png);
+  background-size: cover;
+  height: 460px;
+  left: 1001px;
+  object-fit: cover;
+  position: absolute;
+  top: 460px;
+  width: 439px;
+  rotate: 200deg;
+
+}
+
+.reg-sign-landing .trans-image-3 {
+  background-image: url(../images/trans-image-3.png);
+  background-size: cover;
+  height: 460px;
+  left: 500px;
+  position: absolute;
+  top: 419px;
+  width: 496px;
+}
+
+.reg-sign-landing .trans-image-4 {
+  background-image: url(../images/ellipse-5.png); /* Change the path to your actual image */
+  background-size: cover;
+  height: 460px;
+  left: 950px; /* Adjust the left position based on trans-image-3's left + width */
+  rotate: 85deg;
+  position: absolute;
+  top: 89px; /* Adjust the top position based on trans-image-3's top + height */
+  width: 390px;
+}
+
+
+.reg-sign-landing .main-image-design {
+  background-color: #e5e8ea;
+  border-radius: 287px/285px;
+  height: 570px;
+  left: 763px;
+  position: absolute;
+  top: 227px;
+  width: 574px;
+}
+
+.reg-sign-landing .ellipse-wrapper {
+  background-image: url('../images/ellipse-2.png');
+  background-color: #faf9f6;
+  background-size: cover;  
+  border-radius: 275px/274.5px;
+  height: 549px;
+  left: 11px;
+  position: absolute;
+  top: 10px;
+  width: 550px;
+}
+
+
+.reg-sign-landing .random-trans-circle {
+  background-image: url('../images/ellipse-2.png');
+  background-size: cover;
+  height: 720px;
+  left: 90px;
+  top: 304px;
+  width: 1246px;
+  
+}
+
+.reg-sign-landing .login-button {
+  all: unset;
+  box-sizing: border-box;
+  height: 55px;
+  left: 998px;
+  position: absolute;
+  top: 57px;
+  width: 186px;
+}
+
+.reg-sign-landing .div-wrapper {
+  background-color: #b6bdc2;
+  border-radius: 10px;
+  height: 55px;
+  position: relative;
+  width: 184px;
+  top: 10px
+}
+
+.reg-sign-landing .text-wrapper-2 {
+  color: #2c3454;
+  font-family: "Archivo-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 58px;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 17px;
+  white-space: nowrap;
+  width: 67px;
+}
+
+.reg-sign-landing .register-now-button {
+  all:unset;
+  height: 55px;
+  left: 89px;
+  position: absolute;
+  top: 615px;
+  width: 186px;
+  padding: 0;
+}
+
+.reg-sign-landing .text-wrapper-3 {
+  color: #2c3454;
+  font-family: "Archivo-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 25px;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 20px;
+  white-space: nowrap;
+  width: 134px;
+}
+
+.reg-sign-landing .register-buton {
+  all:unset;
+  height: 55px;
+  left: 1197px;
+  position: absolute;
+  top: 57px;
+  width: 186px;
+
+}
+
+.reg-sign-landing .overlap-2 {
+  background-color: #605ab3;
+  border-radius: 10px;
+  height: 55px;
+  position: relative;
+  width: 184px;
+  top: 9px;
+}
+
+.reg-sign-landing .text-wrapper-4 {
+  color: #2c3454;
+  font-family: "Archivo-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 37px;
+  letter-spacing: 0;
+  line-height: 20px;
+  opacity: 0.75;
+  position: absolute;
+  top: 17px;
+  white-space: nowrap;
+  width: 110px;
+}
+
+.reg-sign-landing .text-wrapper-5 {
+  color: #2c3454;
+  font-family: "Roboto-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 659px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 82px;
+  width: 70px;
+}
+
+.reg-sign-landing .text-wrapper-6 {
+  color: #2c3454;
+  font-family: "Roboto-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 736px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 82px;
+  width: 70px;
+}
+
+.reg-sign-landing .main-text {
+  height: 261px;
+  left: 90px;
+  position: absolute;
+  top: 318px;
+  width: 576px;
+}
+
+.reg-sign-landing .p {
+  color: #2c3454;
+  font-family: "Roboto-Bold", Helvetica;
+  font-size: 40px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 40px;
+  position: absolute;
+  top: 0;
+  width: 572px;
+}
+
+.reg-sign-landing .text-wrapper-7 {
+  color: #2c3454;
+  font-family: "Nunito-Bold", Helvetica;
+  font-size: 24px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: absolute;
+  top: 235px;
+  width: 514px;
+}

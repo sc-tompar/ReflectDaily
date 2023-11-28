@@ -1,0 +1,142 @@
+.landing-page {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.landing-page .overlap-wrapper {
+  background-color: #ffffff;
+  height: 1024px;
+  width: 1920px;
+}
+
+.landing-page .overlap {
+  background-image: url(../images/LandingBackground.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 1024px;
+  position: relative;
+}
+
+.landing-page .reflect-daily {
+  color: transparent;
+  font-family: "Roboto-Bold", Helvetica;
+  font-size: 40px;
+  font-weight: 400;
+  left: 154px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 95px;
+  width: 242px;
+}
+
+.landing-page .text-wrapper {
+  color: #e5a692;
+  font-weight: 700;
+}
+
+.landing-page .span {
+  color: #605ab3;
+  font-family: "Nunito-Bold", Helvetica;
+  font-weight: 700;
+}
+.nav-links {
+  display: flex; 
+  justify-content: start; 
+  position: absolute; 
+  top: 117px; 
+  left: 1087px; 
+}
+
+.nav-link {
+  color: #2c3454;
+  font-family: "Roboto-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 20px; 
+  text-decoration: none; 
+}
+
+.landing-page .text-wrapper-3 {
+  color: #2c3454;
+  font-family: "Roboto-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 1276px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 117px;
+  width: 79px;
+}
+
+.landing-page .main-text {
+  height: 273px;
+  left: 154px;
+  position: absolute;
+  top: 334px;
+  width: 539px;
+}
+
+.landing-page .p {
+  color: #2c3454;
+  font-family: "Roboto-Bold", Helvetica;
+  font-size: 64px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  width: 535px;
+}
+
+.landing-page .text-wrapper-4 {
+  color: #2c3454;
+  font-family: "Nunito-Bold", Helvetica;
+  font-size: 24px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 280px;
+  width: 514px;
+}
+
+.landing-page .get-started-button {
+  all: unset;
+  box-sizing: border-box;
+  height: 46px;
+  left: 151px;
+  position: absolute;
+  top: 710px;
+  width: 100px;
+}
+
+.landing-page .overlap-group {
+  background-color: #605ab3;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 46px;
+  position: relative;
+  width: 135px;
+}
+
+.landing-page .text-wrapper-5 {
+  color: #2c3454;
+  font-family: "Archivo-Bold", Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  left: 27px;
+  letter-spacing: 0;
+  line-height: 14px;
+  opacity: 0.75;
+  position: absolute;
+  top: 17px;
+  white-space: nowrap;
+  width: 81px;
+}
