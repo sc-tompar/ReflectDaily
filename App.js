@@ -17,6 +17,7 @@ import Streak from './pages/Streak.jsx';
 
 const App = () => {
 
+
 return (
 <Router>
  <Routes>
@@ -32,7 +33,9 @@ return (
   <Route
           path="/dashboard/*"
           element={
+            
             <div className="app-container">
+             
               <Sidebar />
               <div className="main-container">
                 <Navbar />
@@ -43,7 +46,8 @@ return (
                   <Route path="/streak" element={<Streak />} />
                 </Routes>
               </div>
-            </div>
+              </div>
+           
           }
         />
 </Routes>
