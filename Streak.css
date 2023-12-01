@@ -1,0 +1,82 @@
+.streak-container {
+  background-color: #2C3454;
+  margin-top: 20px;
+  width: auto;
+  max-width: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  margin-right: 100px;
+  margin-left: 280px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(to right, #232526, #414345); /* Charcoal to gunmetal gray */
+
+}
+
+.streak-container:hover {
+  transform: translateY(-5px);
+  background-color: #3C4A64;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+.rbc-day-bg:hover,
+.rbc-date-cell:hover {
+  background-color: lightskyblue !important;
+  cursor: pointer;
+}
+
+.app-container {
+  display: flex;
+}
+
+.main-container {
+  flex: 1;
+  overflow-x: hidden;
+}
+
+.calendar {
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Shadow for calendar */
+  border-radius: 10px; /* Rounded corners for calendar */
+}
+
+.icon-star, .icon-trophy {
+  font-size: 20px;
+  margin-left: 10px;
+  color: gold;
+  transition: transform 0.3s ease; /* Transition for icon transform */
+}
+
+.icon-star:hover, .icon-trophy:hover {
+  transform: scale(1.1); /* Slight scale up on hover */
+}
+
+.streak-info {
+  font-weight: bold;
+  font-size: 25px;
+  color: #FFD700; /* Golden color for streak information */
+}
+
+.streak-label {
+  font-style: italic;
+  font-size: 12px;
+  color: #A9BACD;
+  margin-top: 5px; /* Spacing for better layout */
+}
+
+/* Additional global styling for enhanced visual consistency */
+body {
+  font-family: 'Arial', sans-serif; /* Consistent font */
+  background-color: #f4f4f4; /* Light background for contrast */
+}
+
+.streak-main-container {
+  background: linear-gradient(to right, #FF9A9E, #FAD0C4, #FAD0C4, #FFDDE1); /* Soft pink to peach tones */
+  padding: 20px; /* Add padding for visual spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: box shadow for depth */
+  height: 92.6vh;
+}
