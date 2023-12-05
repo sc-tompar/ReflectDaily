@@ -5,7 +5,7 @@ const AddNote = ({ handleAddNote }) => {
   const [noteTitle, setNoteTitle] = useState('');
   const [noteText, setNoteText] = useState('');
   const [noteMood, setNoteMood] = useState('');
-  const characterLimit = 200;
+  const characterLimit = 600;
   const titleLimit = 25;
 
   const handleChangeTitle = (event) => {
@@ -24,14 +24,33 @@ const AddNote = ({ handleAddNote }) => {
     setNoteMood(event.target.value);
   };
 
-  const handleSaveClick = () => {
+  const handleSaveClick = async () => {
     if (noteText.trim().length > 0) {
-      handleAddNote(noteText, noteTitle, noteMood); // Pass mood to handleAddNote
-      setNoteTitle('');
-      setNoteText('');
-      setNoteMood('');
+      try {
+        const date = new Date().toLocaleDateString();
+        const response = await fetch('http://localhost:8080/api/reflections/add', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ text: noteText, title: noteTitle, mood: noteMood, date }),
+        });
+  
+        if (response.ok) {
+          const data = await response.json();
+          handleAddNote(data); // Pass the newly added note to handleAddNote
+          setNoteTitle('');
+          setNoteText('');
+          setNoteMood('');
+        } else {
+          console.error('Failed to add reflection:', response.statusText);
+        }
+      } catch (error) {
+        console.error('An error occurred while adding reflection:', error);
+      }
     }
   };
+
 
   return (
     <div className="note new">
