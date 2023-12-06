@@ -106,3 +106,46 @@
     font-style: 'Nunito';
   }
   
+  .edit-mode {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.edit-mode input,
+.edit-mode textarea {
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #FAF9F6;
+    margin-bottom: 10px;
+}
+
+.edit-mode button:hover {
+    background-color: aquamarine;
+}
+
+.note-head .edit-icon {
+  cursor: pointer;
+}
+
+.edit-mode button {
+  background-color: #2C3454;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 5px; /* Add some spacing between buttons */
+}
+
+.insert-image-icon {
+  cursor: pointer;
+}
+
+.note-head .edit-icon,
+.note-head .insert-image-icon,
+.note-head .delete-icon {
+    cursor: pointer;
+    margin-right: 10px; /* Adjust the margin to increase or decrease spacing between icons */
+}
