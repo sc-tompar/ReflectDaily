@@ -149,3 +149,23 @@
     cursor: pointer;
     margin-right: 10px; /* Adjust the margin to increase or decrease spacing between icons */
 }
+
+.note-title {
+  color: rebeccapurple;
+  font-weight: bold;
+}
+
+.mood {
+  color: red;
+  font-weight: bold;
+}
+
+.note-body {
+  overflow-wrap: break-word; /* This property allows long words to be broken and wrap onto the next line */
+  word-wrap: break-word; /* Fallback for browsers that do not support overflow-wrap */
+}
+
+.date {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
