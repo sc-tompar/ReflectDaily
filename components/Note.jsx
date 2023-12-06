@@ -1,56 +1,90 @@
-import React, { useState } from 'react';
-import { MdDeleteForever } from 'react-icons/md';
-import '../styles/Reflection.css';
+import { useState } from 'react';
+import { MdDeleteForever, MdEdit, MdSave, MdInsertPhoto } from 'react-icons/md';
+import '../style/Reflection.css';
 
-const Note = ({ id, title, text, date, mood, handleDeleteNote }) => {
-  const [showConfirmation, setShowConfirmation] = useState(false);
+const Note = ({ id, title, text, date, mood, handleDeleteNote, updateNote }) => {
+    const [isEditing, setIsEditing] = useState(false);
+    const [editedTitle, setEditedTitle] = useState(title);
+    const [editedText, setEditedText] = useState(text);
+    const [editedMood, setEditedMood] = useState(mood);
 
-  const deleteNote = async () => {
-    // Display confirmation dialog
-    const confirmed = window.confirm('Are you sure you want to delete this record?');
+    const handleEditClick = () => {
+        setIsEditing(true);
+    };
 
-    if (confirmed) {
-      try {
-        const response = await fetch(`http://localhost:8080/api/reflections/delete/${id}`, {
-          method: 'DELETE',
+    const handleSaveClick = () => {
+        updateNote(id, editedTitle, editedText, editedMood);
+        setIsEditing(false);
+    };
+
+    const handleInsertImage = () => {
+        // Create a file input element
+        const input = document.createElement('input');
+        input.type = 'file';
+
+        // Trigger the file input click event
+        input.click();
+
+        // Handle the file selection event
+        input.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+
+            if (file) {
+                // You may want to use FileReader or upload the file to a server
+                // For simplicity, I'll set the image URL directly
+                const imageUrl = URL.createObjectURL(file);
+                setEditedText((prevText) => `${prevText} ![Alt Text](${imageUrl}) `);
+            }
         });
+    };
 
-        if (response.ok) {
-          handleDeleteNote(); // Fetch updated reflections after deleting one
-          alert('Record successfully deleted'); // Show success message
-        } else {
-          console.error('Failed to delete reflection:', response.statusText);
-          alert('Failed to delete record'); // Show error message
-        }
-      } catch (error) {
-        console.error('An error occurred while deleting reflection:', error);
-        alert('An error occurred while deleting record'); // Show error message
-      }
-    }
-  };
-
-  return (
-    <div className='note'>
-      <div className='note-head'>
-        <span className='note-title'>{title}</span>
-        <MdDeleteForever onClick={() => setShowConfirmation(true)} className='delete-icon' size='1.3em' />
-      </div>
-      <span className='note-body'>{text}</span>
-      <div className="note-footer">
-        <small className='mood'>{mood}</small>
-        <small>{date}</small>
-      </div>
-
-      {/* Confirmation dialog */}
-      {showConfirmation && (
-        <div className="confirmation-dialog">
-          <p>Are you sure you want to delete this record?</p>
-          <button onClick={() => deleteNote()}>Yes</button>
-          <button onClick={() => setShowConfirmation(false)}>No</button>
+    return (
+        <div className={`note ${isEditing ? 'editing' : ''}`}>
+            {isEditing ? (
+                <div className='edit-mode'>
+                    <input
+                        type='text'
+                        value={editedTitle}
+                        onChange={(e) => setEditedTitle(e.target.value)}
+                        placeholder='Enter a title'
+                    />
+                    <textarea
+                        value={editedText}
+                        onChange={(e) => setEditedText(e.target.value)}
+                        placeholder='Type to edit...'
+                    ></textarea>
+                    <input
+                        type='text'
+                        value={editedMood}
+                        onChange={(e) => setEditedMood(e.target.value)}
+                        placeholder='Enter a mood'
+                    />
+                    <button onClick={handleSaveClick}>
+                        <MdSave className='save-icon' size='1.3em' />
+                    </button>
+                    <button onClick={handleInsertImage}>
+                        <MdInsertPhoto className='insert-image-icon' size='1.3em' />
+                    </button>
+                </div>
+            ) : (
+                <>
+                    <div className='note-head'>
+                        <span className='note-title'>{title}</span>
+                        <div className='note-icons'>
+                            <MdEdit onClick={handleEditClick} className='edit-icon' size='1.3em' />
+                            <MdInsertPhoto className='insert-image-icon' size='1.3em' onClick={handleInsertImage} />
+                            <MdDeleteForever onClick={() => handleDeleteNote(id)} className='delete-icon' size='1.3em' />
+                        </div>
+                    </div>
+                    <span className='note-body'>{text}</span>
+                    <div className='note-footer'>
+                        <small className='mood'>{mood}</small>
+                        <small>{date}</small>
+                    </div>
+                </>
+            )}
         </div>
-      )}
-    </div>
-  );
+    );
 };
 
 export default Note;
