@@ -1,6 +1,6 @@
 import React from 'react';
 import { MdSearch } from 'react-icons/md';
-import '../styles/Reflection.css';
+import '../style/Reflection.css';
 
 const Search = ({ handleSearchNote, handleSearchTitle }) => {
     return (
