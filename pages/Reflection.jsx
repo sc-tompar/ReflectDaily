@@ -66,6 +66,34 @@ const Reflection = () => {
         }
       };
 
+      const updateNote = async (id, editedTitle, editedText, editedMood) => {
+        try {
+            const response = await fetch(`http://localhost:8080/api/reflections/update/${id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    title: editedTitle,
+                    text: editedText,
+                    mood: editedMood,
+                }),
+            });
+
+            if (response.ok) {
+                fetchReflections(); // Fetch updated reflections after editing
+                alert('Record successfully edited'); // Show success message
+            } else {
+                console.error('Failed to edit reflection:', response.statusText);
+                alert('Failed to edit record'); // Show error message
+            }
+        } catch (error) {
+            console.error('An error occurred while editing reflection:', error);
+            alert('An error occurred while editing record'); // Show error message
+        }
+    };
+
+
     return (
         <div>
             <div className='header'>
@@ -81,6 +109,7 @@ const Reflection = () => {
                     )}
                     handleAddNote={addNote}
                     handleDeleteNote={deleteNote}
+                    updateNote={updateNote}
                 />
             </div>
         </div>
