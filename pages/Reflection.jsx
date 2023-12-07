@@ -103,10 +103,14 @@ const Reflection = () => {
                 <Search handleSearchNote={setSearchText} handleSearchTitle={setSearchTitle} />
                 <NotesList
                 
+                   
                     notes={notes.filter((note) =>
-                        (note.text?.toLowerCase().includes(searchText) || false) ||
-                        (note.title?.toLowerCase().includes(searchTitle) || false)
+                      (note.text || '').toLowerCase().includes(searchText.toLowerCase()) ||
+                      (note.text || '').toUpperCase().includes(searchText.toUpperCase()) ||
+                      (note.title || '').toLowerCase().includes(searchTitle.toLowerCase()) ||
+                      (note.title || '').toUpperCase().includes(searchTitle.toUpperCase())
                     )}
+                    
                     handleAddNote={addNote}
                     handleDeleteNote={deleteNote}
                     updateNote={updateNote}
