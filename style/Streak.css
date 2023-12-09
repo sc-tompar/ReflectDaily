@@ -1,41 +1,199 @@
 .streak-container {
-    background-color: #2C3454;
-    margin-top: 20px;
-    width: 18%;
-    padding: 20px;
-    border-radius: 10px;
-    display: inline-block;
-    vertical-align: top;
-    box-sizing: border-box;
-    margin-right: 200px;
-    margin-left: 180px;
-    color: white;
-    transition: background-color 0.3s ease; /* Add a transition effect for smooth color change */
-  }
-
-  .streak-container:hover {
-    background-color: lightskyblue; /* Change the background color to transparent on hover */
-  }
-
-  .streak-label-container {
-    background-color: #2C3454;
-    padding: 7px;
-    border-radius: 10px; /* Add curved corners */
-    transition: background-color 0.3s; /* Add transition effect for color change */
-    width: 9%;
-    margin-top: 30px;
-    color: white;
-  }
-  
-  .streak-label-container:hover {
-    background-color: lightblue; /* Change background color on hover to lightblue */
-    transition: background-color 0.3s; /* Add transition effect for color change */
-    color: #2C3454; /* Change text color on hover to the original background color */
-  }
-
-  .rbc-day-bg:hover,
-.rbc-date-cell:hover {
-    background-color: lightskyblue !important;
-    cursor: pointer; /* Optional: Change cursor to a pointer when hovering over cells */
+  margin-top: 20px;
+  width: auto;
+  max-width: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  margin-right: 100px;
+  margin-left: 280px;
+  color: white;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, scale 0.2s ease; /* Added scale transition */
+  background: linear-gradient(to right, #FF6B6B, #FFA07A);
 }
-  
+
+.streak-container:hover {
+  transform: translateY(-5px) rotate(-2deg); /* Added rotation on hover */
+  background-color: #FF4F4F;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  scale: 1.08; /* Added scale on hover */
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, scale 0.2s ease;
+}
+
+.rbc-day-bg:hover,
+.rbc-date-cell:hover {
+  background-color: lightskyblue !important;
+  cursor: pointer;
+}
+
+.app-container {
+  display: flex;
+}
+
+.main-container {
+  flex: 1;
+  overflow-x: hidden;
+}
+
+.calendar {
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Shadow for calendar */
+  border-radius: 10px; /* Rounded corners for calendar */
+}
+
+.icon-star, .icon-trophy {
+  font-size: 20px;
+  margin-left: 10px;
+  color: gold;
+  transition: transform 0.3s ease; /* Transition for icon transform */
+}
+
+.icon-star:hover, .icon-trophy:hover {
+  transform: scale(1.1); /* Slight scale up on hover */
+}
+
+.streak-info {
+  font-weight: bold;
+  font-size: 25px;
+  color: #FFD700; /* Golden color for streak information */
+}
+
+.streak-label {
+  font-style: italic;
+  font-size: 12px;
+  color: #A9BACD;
+  margin-top: 5px; /* Spacing for better layout */
+}
+
+/* Additional global styling for enhanced visual consistency */
+body {
+  font-family: 'Arial', sans-serif; /* Consistent font */
+  background-color: #f4f4f4; /* Light background for contrast */
+}
+
+.streak-main-container {
+  background: linear-gradient(to right, #FF9A9E, #FAD0C4, #FAD0C4, #FFDDE1); /* Soft pink to peach tones */
+  padding: 20px; /* Add padding for visual spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: box shadow for depth */
+  height: 92.6vh;
+}
+
+/* Streak.css - Add these styles for enhancing the Day component */
+
+/* Style for the day cell */
+/* Existing styles... */
+
+/* Custom event styles */
+/* Custom styles for calendar views */
+/* Base Styles for Calendar */
+.rbc-calendar {
+  font-family: 'Arial', sans-serif; /* Consistent font family */
+}
+
+/* Styling for each day cell in month view */
+.rbc-day-bg {
+  border-bottom: 1px solid #EDEDED; /* Subtle bottom border */
+}
+
+/* Header for days in week and month views */
+.rbc-header {
+  background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Blue gradient */
+  color: white; /* White text for contrast */
+  padding: 8px; /* Padding for spacing */
+  border-radius: 4px; /* Rounded corners */
+  margin: 4px; /* Space between headers */
+  text-align: center; /* Center align text */
+}
+
+/* Styles for the events */
+.rbc-event {
+  background: linear-gradient(135deg, #c3e4bd, #fceabb); /* Soft green to pale yellow gradient */
+  color: #2a2a2a; /* Dark text for readability */
+  border-radius: 5px; /* Round corners */
+  padding: 4px 10px; /* Padding inside event */
+  font-size: 0.9em; /* Slightly smaller font size */
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Styling for today */
+.rbc-today {
+  background: linear-gradient(to right, #A6C0FE, #FBC2EB); /* Soft blue to lavender tones */
+  color: white !important; /* White text for good contrast */
+  font-weight: bold; /* Make the text bold */
+}
+
+/* Styling for off-range days */
+.rbc-off-range-bg {
+  background-color: #f8f9fa; /* Lighter background for off-range days */
+}
+
+/* Styling for selected day */
+.rbc-day-selected {
+  background-color: #007bff; /* Blue background for selected day */
+  color: white; /* White color for text */
+}
+
+/* Styles for agenda view */
+.rbc-agenda-view {
+  border-top: 1px solid #dee2e6; /* Top border for separation */
+}
+
+.rbc-agenda-content {
+  border-top: 1px solid #dee2e6; /* Top border for each agenda item */
+}
+
+.rbc-agenda-date-cell, 
+.rbc-agenda-time-cell, 
+.rbc-agenda-event-cell {
+  padding: 10px; /* Padding for agenda cells */
+  border-bottom: 1px solid #dee2e6; /* Bottom border for separation */
+}
+
+/* Modify the time gutter in week and day views */
+.rbc-time-gutter {
+  background-color: #f0f0f0; /* Light gray background */
+}
+
+/* Styles for the time slots */
+.rbc-timeslot-group {
+  min-height: 50px; /* Increased height for better visibility */
+}
+
+/* Custom styles for your custom event component */
+.custom-event {
+  display: flex; /* Flex display for alignment */
+  justify-content: space-between; /* Space between elements */
+  align-items: center; /* Align items vertically */
+}
+
+/* Styles for the title, note, and mood in the custom event */
+.custom-event .event-title,
+.custom-event .event-note,
+.custom-event .event-mood {
+  margin-right: 10px; /* Margin for spacing */
+}
+
+/* Additional customizations can be added as needed */
+
+.rbc-day-bg:hover, .rbc-header:hover, .rbc-event:hover {
+  background: linear-gradient(135deg, #89f7fe, #66a6ff); /* Light blue gradient on hover */
+  color: #fff; /* White text on hover */
+  cursor: pointer; /* Change cursor to indicate interactivity */
+}
+
+/* Additional hover effect for the selected day */
+.rbc-day-selected:hover {
+  background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%); /* Pink gradient for selected day on hover */
+  color: white;
+}
+
+/* Custom event hover effect */
+.custom-event:hover {
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7); /* Soft pink gradient */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Slightly deeper shadow on hover */
+}
+
+
