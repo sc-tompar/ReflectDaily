@@ -13,11 +13,9 @@ import Dashboard from './pages/Dashboard.jsx';
 import Quotes from './pages/Quotes.jsx';
 import Reflection from './pages/Reflection.jsx';
 import Streak from './pages/Streak.jsx';
- 
+import NoteDetail from './components/NoteDetail.jsx'; //this one is newly added
 
 const App = () => {
-
-
 return (
 <Router>
  <Routes>
@@ -28,6 +26,7 @@ return (
   <Route path="/regsignlanding" element={<RegSignLanding />} />
   <Route path="/login" element={<Login />} />
   <Route path="/register" element={<Register />} />
+  
 
   {/* Nested route for dashboard content */}
   <Route
@@ -44,6 +43,7 @@ return (
                   <Route path="/quotes" element={<Quotes />} />
                   <Route path="/reflection" element={<Reflection />} />
                   <Route path="/streak" element={<Streak />} />
+                  <Route path="/reflection/:id" element={<NoteDetail/>} /> //this one is newly added
                 </Routes>
               </div>
               </div>
