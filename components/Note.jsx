@@ -5,7 +5,7 @@ import '../styles/Reflection.css';
 
 const Note = ({id, title, text, date, mood, handleDeleteNote, updateNote }) => {
     const navigate = useNavigate();
-    const [isExpanded, setIsExpanded] = useState(false);
+    const [isExpanded, setIsExpanded] = useState(false); //this one is newly added
     const [isEditing, setIsEditing] = useState(false);
     const [editedTitle, setEditedTitle] = useState(title);
     const [editedText, setEditedText] = useState(text);
@@ -20,7 +20,7 @@ const Note = ({id, title, text, date, mood, handleDeleteNote, updateNote }) => {
     const handleExpandClick = () => {
         setIsExpanded(!isExpanded);
         if (!isExpanded) {
-            navigate(`/dashboard/reflection/${id}`);
+            navigate(`/dashboard/reflection/${id}`);        //this one is newly added
         }
     };
     
@@ -145,7 +145,7 @@ const Note = ({id, title, text, date, mood, handleDeleteNote, updateNote }) => {
                             <MdEdit onClick={handleEditClick} className='edit-icon' size='1.3em' />
                             <MdInsertPhoto className='insert-image-icon' size='1.3em' onClick={handleInsertImage} />
                             <MdDeleteForever onClick={handleDeleteClick} className='delete-icon' size='1.3em' />
-                            <MdZoomIn onClick={handleExpandClick} className='expand-icon' size='1.3em' />
+                            <MdZoomIn onClick={handleExpandClick} className='expand-icon' size='1.3em' /> //this one is newly added
                         </div>
                     </div>
                     
