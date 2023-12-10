@@ -1,0 +1,57 @@
+.reflection-details {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  text-align: center;
+  margin-top: 100px;
+}
+
+button {
+  padding: 10px 16px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px; /* Increased font size */
+}
+
+.edit-icon {
+  cursor: pointer;
+  color: #333;
+}
+
+.reflection-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 800px; /* Set the maximum width of the container */
+  margin: 0 auto; /* Center the container */
+}
+
+.icons-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 20px; /* Separate from the text */
+  margin-left: auto; /* Use auto margin to push icons to the top right */
+}
+
+.reflection-title {
+  font-size: 56px; /* Adjust the font size as needed */
+  margin-bottom: 10px; /* Add margin to separate from the text */
+}
+
+.reflection-text {
+  font-size: 24px; /* Adjust the font size as needed */
+  margin: 20px 0; /* Add margin to separate from the footer */
+}
+
+.mood,
+.date {
+  font-size: 18px; /* Adjust the font size as needed */
+  /* Add margin to separate the small elements */
+}
