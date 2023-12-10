@@ -5,14 +5,9 @@ import moment from 'moment';
 import { FaStar, FaTrophy } from 'react-icons/fa';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import '../styles/Streak.css';
+import { useNavigate } from 'react-router-dom';
 
-const CustomEvent = ({ event }) => (
-    <div className="custom-event">
-      <div className="event-title">{event.title}</div>
-      <div className="event-note">{event.note}</div>
-      <div className="event-mood">{event.mood}</div>
-    </div>
-  );
+
 
     
 const Streak = () => {
@@ -20,8 +15,10 @@ const Streak = () => {
     const [reflections, setReflections] = useState([]);
     const [currentStreak, setCurrentStreak] = useState(0);
     const [longestStreak, setLongestStreak] = useState(0);
+    const navigate = useNavigate();
 
 
+   
     useEffect(() => {
         fetchReflections();
     }, []);
@@ -82,7 +79,7 @@ const Streak = () => {
         start: new Date(reflection.date),
         end: new Date(reflection.date),
         allDay: true, // Set the event as an all-day event
-
+        id: reflection.id,
          
     }));
 
@@ -94,6 +91,23 @@ const Streak = () => {
         dayRangeHeaderFormat: ({ start, end }, culture, localizer) =>
           `${localizer.format(start, 'MMM DD', culture)} — ${localizer.format(end, 'MMM DD', culture)}`, // Customize range header
       };
+
+
+
+
+      const handleTitleClick = (event) => {
+        const id = event.id;
+        navigate(`/dashboard/reflection/${id}`);
+    };
+
+    
+    const CustomEvent = ({ event }) => (
+        <div className="custom-event" onClick={() => handleTitleClick(event)}>
+            <div className="event-title">{event.title}</div>
+            <div className="event-note">{event.note}</div>
+            <div className="event-mood">{event.mood}</div>
+        </div>
+    );
     
     return (
         <div className="streak-main-container">
