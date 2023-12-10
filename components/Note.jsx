@@ -1,17 +1,29 @@
 import { useState } from 'react';
-import { MdDeleteForever, MdEdit, MdSave, MdInsertPhoto } from 'react-icons/md';
+import { useNavigate } from 'react-router-dom';
+import { MdDeleteForever, MdEdit, MdSave, MdInsertPhoto,  MdZoomIn } from 'react-icons/md';
 import '../styles/Reflection.css';
 
 const Note = ({id, title, text, date, mood, handleDeleteNote, updateNote }) => {
+    const navigate = useNavigate();
+    const [isExpanded, setIsExpanded] = useState(false);
     const [isEditing, setIsEditing] = useState(false);
     const [editedTitle, setEditedTitle] = useState(title);
     const [editedText, setEditedText] = useState(text);
     const [editedMood, setEditedMood] = useState(mood);
 
+    
+
     const handleEditClick = () => {
         setIsEditing(true);
     };
 
+    const handleExpandClick = () => {
+        setIsExpanded(!isExpanded);
+        if (!isExpanded) {
+            navigate(`/dashboard/reflection/${id}`);
+        }
+    };
+    
     
     const handleSaveClick = async () => {
       try {
@@ -133,6 +145,7 @@ const Note = ({id, title, text, date, mood, handleDeleteNote, updateNote }) => {
                             <MdEdit onClick={handleEditClick} className='edit-icon' size='1.3em' />
                             <MdInsertPhoto className='insert-image-icon' size='1.3em' onClick={handleInsertImage} />
                             <MdDeleteForever onClick={handleDeleteClick} className='delete-icon' size='1.3em' />
+                            <MdZoomIn onClick={handleExpandClick} className='expand-icon' size='1.3em' />
                         </div>
                     </div>
                     
