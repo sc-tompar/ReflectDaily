@@ -7,12 +7,20 @@ const Reflection = () => {
     const [notes, setNotes] = useState([]);
     const [searchText, setSearchText] = useState('');
     const [searchTitle, setSearchTitle] = useState('');
+    const [sortByDate, setSortByDate] = useState(false);
+    const [moods, setMoods] = useState([]);
+    const [selectedMood, setSelectedMood] = useState('');
+   
+
 
     useEffect(() => {
         // Fetch reflections from the backend on component mount
         fetchReflections();
+        fetchMoods();
     }, []);
 
+
+    
     const fetchReflections = async () => {
         try {
             const response = await fetch('http://localhost:8080/api/reflections/all');
@@ -26,6 +34,20 @@ const Reflection = () => {
             console.error('An error occurred while fetching reflections:', error);
         }
     };
+
+    const fetchMoods = async () => {
+      try {
+          const response = await fetch('http://localhost:8080/api/reflections/moods');
+          if (response.ok) {
+              const data = await response.json();
+              setMoods(data);
+          } else {
+              console.error('Failed to fetch moods:', response.statusText);
+          }
+      } catch (error) {
+          console.error('An error occurred while fetching moods:', error);
+      }
+  };
 
     const addNote = async (text, title, mood) => {
         try {
@@ -94,13 +116,55 @@ const Reflection = () => {
     };
 
 
+   
+
+  const toggleSortByDate = () => {
+    setSortByDate((prevSortByDate) => !prevSortByDate);
+    setNotes((prevNotes) => {
+        const sortedNotes = [...prevNotes].sort((a, b) => {
+            const dateA = new Date(a.date);
+            const dateB = new Date(b.date);
+            return sortByDate ? dateA - dateB : dateB - dateA;
+        });
+        return sortedNotes;
+    });
+};
+
+
+
     return (
-        <div>
-            <div className='header'>
-                <h1 className='header'>Reflection</h1>
+        
+            <div className='bodynas'>
+            
+         <div className='cons'>
+                <div className='search-sort-container'>
+                    <div className='search-note'>
+                        <Search handleSearchNote={setSearchText} handleSearchTitle={setSearchTitle} />
+                    </div>
+                    
+                    <div className='sort-button'>
+                        <button onClick={toggleSortByDate}>
+                            {sortByDate ? 'Sort by Oldest Date' : 'Sort by Latest Date'}
+                        </button>
+                    </div>
+                </div>
+
+                <div className='filter-note'>
+                <label htmlFor='moodFilter'>Filter by Mood:</label>
+                <select
+                    id='moodFilter'
+                    onChange={(e) => setSelectedMood(e.target.value)}
+                    value={selectedMood}
+                >
+                    <option value=''>All Moods</option>
+                    {moods.map((mood) => (
+                        <option key={mood} value={mood}>
+                            {mood}
+                        </option>
+                    ))}
+                </select>
             </div>
-            <div className='cons'>
-                <Search handleSearchNote={setSearchText} handleSearchTitle={setSearchTitle} />
+                            
                 <NotesList
                 
                    
@@ -110,13 +174,12 @@ const Reflection = () => {
                       (note.title || '').toLowerCase().includes(searchTitle.toLowerCase()) ||
                       (note.title || '').toUpperCase().includes(searchTitle.toUpperCase())
                     )}
-                    
                     handleAddNote={addNote}
                     handleDeleteNote={deleteNote}
                     updateNote={updateNote}
                 />
             </div>
-        </div>
+            </div>
     );
 };
 
