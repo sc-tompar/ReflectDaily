@@ -14,6 +14,7 @@ import Quotes from './pages/Quotes.jsx';
 import Reflection from './pages/Reflection.jsx';
 import Streak from './pages/Streak.jsx';
 import NoteDetail from './components/NoteDetail.jsx'; //this one is newly added
+import { AuthProvider } from './utils/AuthContext.jsx';
 
 const App = () => {
 return (
@@ -34,8 +35,9 @@ return (
           element={
             
             <div className="app-container">
-             
+             <AuthProvider>
               <Sidebar />
+              </AuthProvider>
               <div className="main-container">
                 <Navbar />
                 <Routes>
