@@ -31,6 +31,8 @@ export default function Login() {
       });
 
       if (response.ok) {
+        const userData = await response.json(); // Assuming the response contains user data
+      localStorage.setItem('userData', JSON.stringify(userData)); //gi usab line 35 og 34
         navigate('/dashboard');
       } else {
         const errorData = await response.text();
