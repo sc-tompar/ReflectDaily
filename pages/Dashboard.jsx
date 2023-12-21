@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 import Reflection from './Reflection';
 import Streak from './Streak';
 import '../styles/Dashboard.css';  // Import your Dashboard styles
+import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
     const [recentReflections, setRecentReflections] = useState([]);
+    const navigate = useNavigate(); 
 
     useEffect(() => {
         fetchRecentReflections();
@@ -34,18 +36,21 @@ const Dashboard = () => {
                     {recentReflections.map((reflection) => (
                         <li key={reflection.id} className="recent-reflection-item">
                             <Link to={`/dashboard/reflection/${reflection.id}`} className="recent-reflection-link">
-                                {reflection.title} - {reflection.text}
+                            <div className="recent-reflection-title">{reflection.title}</div>
+                            <div className="recent-reflection-mood">{reflection.mood}</div>
+                            <div className="recent-reflection-date">{reflection.date}</div>
                             </Link>
                             
                         </li>
                     ))}
                     
                 </ul>
-                <Streak />
+                
+            <Streak />
+            
             </div>
 
-            {/* Calendar Streak Section */}
-            
+       
         </div>
         
         </div>
