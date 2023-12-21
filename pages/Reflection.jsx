@@ -142,8 +142,8 @@ const Reflection = () => {
                         <Search handleSearchNote={setSearchText} handleSearchTitle={setSearchTitle} />
                     </div>
                     
-                    <div className='sort-button'>
-                        <button onClick={toggleSortByDate}>
+                    <div>
+                        <button className='sort-button' onClick={toggleSortByDate}>
                             {sortByDate ? 'Sort by Oldest Date' : 'Sort by Latest Date'}
                         </button>
                     </div>
@@ -165,15 +165,13 @@ const Reflection = () => {
                 </select>
             </div>
                             
-                <NotesList
-                
-                   
+            <NotesList
                     notes={notes.filter((note) =>
-                      (note.text || '').toLowerCase().includes(searchText.toLowerCase()) ||
-                      (note.text || '').toUpperCase().includes(searchText.toUpperCase()) ||
-                      (note.title || '').toLowerCase().includes(searchTitle.toLowerCase()) ||
-                      (note.title || '').toUpperCase().includes(searchTitle.toUpperCase())
-                    )}
+                        (note.text || '').toLowerCase().includes(searchText.toLowerCase()) ||
+                        (note.text || '').toUpperCase().includes(searchText.toUpperCase()) ||
+                        (note.title || '').toLowerCase().includes(searchTitle.toLowerCase()) ||
+                        (note.title || '').toUpperCase().includes(searchTitle.toUpperCase())
+                    ).filter((note) => selectedMood === '' || note.mood === selectedMood)}
                     handleAddNote={addNote}
                     handleDeleteNote={deleteNote}
                     updateNote={updateNote}
