@@ -5,6 +5,9 @@
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .note.new {
@@ -80,6 +83,10 @@ textarea:focus {
 }
 
 .delete-icon {
+  cursor: pointer;
+}
+
+.expand-icon {
   cursor: pointer;
 }
 
@@ -170,7 +177,7 @@ color: rgba(0, 0, 0, 0.5);
 font-weight: bold;
 }
 
-button {
+.button {
   padding: 10px 16px;
   background-color: #2C3454;
   margin-bottom: 30px;
@@ -181,8 +188,51 @@ button {
   font-size: 16px; /* Increased font size */
 }
 
+.sort-button{
+  padding: 10px 16px;
+  background-color: #2C3454;
+  margin-bottom: 30px;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px; /* Increased font size */
+}
  
  .bodynas{
   background-image: linear-gradient(to right, #e5a692, #605ab3);
-  height: 92.4vh;
+  height: auto;
  }
+
+
+ 
+.filter-note {
+  margin-top: 10px;
+}
+
+label {
+  font-size: 16px;
+  margin-right: 8px;
+  color: #333; /* Adjust the color as needed */
+}
+
+select {
+  font-size: 14px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+select:hover,
+select:focus {
+  border-color: #555; /* Adjust the color on hover/focus */
+}
+
+/* Optional: Add some spacing between the label and the select */
+.label-select-container {
+  display: flex;
+  align-items: center;
+}
